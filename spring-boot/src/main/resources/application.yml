@@ -1,0 +1,18 @@
+server:
+  port: 50001
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://176.122.153.57:3306/fm_purcharce?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=GMT&useSSL=false
+      username: root
+      password: 123456
+      stat-view-servlet:
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: druid
+        login-password: druid
+      web-stat-filter:
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
